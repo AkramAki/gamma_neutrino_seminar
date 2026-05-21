@@ -177,55 +177,98 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Charged particles inside the magnetosphere}
+\begin{frame}{How could pulsars produce gamma rays?}
 
   \begin{columns}[T,onlytextwidth]
 
-    \begin{column}{0.54\textwidth}
-
+    \begin{column}{0.5\textwidth}
       \centering
-      %https://heasarc.gsfc.nasa.gov/docs/xte/learning_center/xray_techc.html
-      \includegraphics[width=\textwidth]{images/synchrotron_motion.png}
+      % https://encyclopedia2.thefreedictionary.com/_/viewer.aspx?path=hcAstr&name=a_synchr.jpg&url=https%3A%2F%2Fencyclopedia2.thefreedictionary.com%2Fsynchrotron%2Bemission
+      \includegraphics[
+        width=0.6\textwidth,
+        angle=90,
+        trim=10cm 2cm 10cm 0,
+        clip
+      ]{images/synchroton_radiation.png}
 
       \vspace{0.15cm}
 
-      {\scriptsize Charged particles spiral around magnetic field lines}
-
+      {\scriptsize
+      Synchrotron and curvature radiation: charged particles radiate when their motion is bent}
     \end{column}
 
-    \begin{column}{0.42\textwidth}
+    \begin{column}{0.5\textwidth}
+      \centering
+      % https://www.researchgate.net/profile/Camden-Ertley/publication/260971192/figure/fig6/AS:613894569615398@1523375279858/Example-of-inverse-Compton-scattering.png
+      \includegraphics[width=\textwidth]{images/IC_scattering.png}
 
-      \vspace{0.35cm}
+      \vspace{0.15cm}
 
-      \begin{itemize}
-
-        \item Charged particles are forced onto curved trajectories by magnetic fields
-
-        \vspace{0.25cm}
-
-        \item Stronger magnetic fields reduce the gyration radius
-
-        \vspace{0.25cm}
-
-        \item In pulsars, particles effectively follow the magnetic field structure
-
-        \vspace{0.25cm}
-
-        \item The rotating magnetic field forces approximate co-rotation of the surrounding plasma
-
-        \end{itemize}
-
-        \vspace{0.55cm}
-
-        \begin{block}{Key idea}
-            The magnetosphere controls how particles move and where radiation can be produced.
-        \end{block}
-
+      {\scriptsize
+      Inverse Compton scattering: low-energy photons are boosted to gamma-ray energies}
     \end{column}
 
   \end{columns}
 
+  \vspace{0.35cm}
+  \begin{block}{Different radiation mechanisms}
+    Pulsars can produce gamma rays through several mechanisms.
+    Understanding which process dominates at different energies
+    is one of the central questions in pulsar astrophysics.
+  \end{block}
+
 \end{frame}
+
+
+%\begin{frame}{Charged particles inside the magnetosphere}
+%
+%  \begin{columns}[T,onlytextwidth]
+%
+%    \begin{column}{0.54\textwidth}
+%
+%      \centering
+%      %https://heasarc.gsfc.nasa.gov/docs/xte/learning_center/xray_techc.html
+%      \includegraphics[width=\textwidth]{images/synchrotron_motion.png}
+%
+%      \vspace{0.15cm}
+%
+%      {\scriptsize Charged particles spiral around magnetic field lines}
+%
+%    \end{column}
+%
+%    \begin{column}{0.42\textwidth}
+%
+%      \vspace{0.35cm}
+%
+%      \begin{itemize}
+%
+%        \item Charged particles are forced onto curved trajectories by magnetic fields
+%
+%        \vspace{0.25cm}
+%
+%        \item Stronger magnetic fields reduce the gyration radius
+%
+%        \vspace{0.25cm}
+%
+%        \item In pulsars, particles effectively follow the magnetic field structure
+%
+%        \vspace{0.25cm}
+%
+%        \item The rotating magnetic field forces approximate co-rotation of the surrounding plasma
+%
+%        \end{itemize}
+%
+%        \vspace{0.55cm}
+%
+%        \begin{block}{Key idea}
+%            The magnetosphere controls how particles move and where radiation can be produced.
+%        \end{block}
+%
+%    \end{column}
+%
+%  \end{columns}
+%
+%\end{frame}
 
 \begin{frame}{Why is a spectral cutoff expected?}
 
@@ -346,16 +389,18 @@
     \begin{column}{0.54\textwidth}
       \vspace{0.25cm}
 
-      \begin{block}{Key idea}
-        The observed radiation is connected to the rotating magnetosphere,
-        producing characteristic periodic pulse profiles.
-      \end{block}
+    \begin{block}{Key idea}
+      Periodic pulses show that the gamma-ray emission is tied to the
+      rotating magnetosphere. The pulse shape therefore contains
+      information about where the radiation is produced.
+    \end{block}
 
       \vspace{0.2cm}
 
       {\footnotesize
-      The detailed emission geometry is more complex and remains an active
-      area of research. Here, only a high-level picture is used.}
+      Different models place the emission region in different parts of the
+      magnetosphere, current sheet, or pulsar wind. The exact geometry
+      remains an active area of research.}
     \end{column}
 
   \end{columns}
@@ -375,6 +420,109 @@
   {\scriptsize Vela pulse profile folded over one rotation period}
 
 \end{frame}
+
+\begin{frame}{The High Energy Stereoscopic System (H.E.S.S.)}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.58\textwidth}
+
+      \centering
+      %https://en.wikipedia.org/wiki/High_Energy_Stereoscopic_System
+      \includegraphics[width=\textwidth]{images/Hess_array.jpg}
+
+      \vspace{0.15cm}
+
+      {\scriptsize The H.E.S.S. telescope array in Namibia}
+
+    \end{column}
+
+    \begin{column}{0.38\textwidth}
+      \begin{itemize}
+
+        \item Located in the Khomas Highland of Namibia
+
+        \vspace{0.1cm}
+
+        \item Array of Imaging Atmospheric Cherenkov Telescopes (IACTs)
+
+        \vspace{0.1cm}
+
+        \item Designed to observe very-high-energy gamma rays
+
+        \vspace{0.1cm}
+
+        \item Sensitive roughly from
+        \qty{30}{\giga\electronvolt}
+        to beyond
+        \qty{10}{\tera\electronvolt}
+
+        \vspace{0.1cm}
+
+        \item Operates since 2003
+
+      \end{itemize}
+
+      \vspace{0.25cm}
+
+      \begin{block}{Why H.E.S.S.?}
+        Space-based gamma-ray telescopes become limited at very high energies.
+        Ground-based Cherenkov telescopes allow us to study the TeV regime.
+      \end{block}
+
+    \end{column}
+
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{How does H.E.S.S. detect TeV gamma rays?}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.58\textwidth}
+
+      \centering
+      % https://skyandtelescope.org/sky-and-telescope-magazine/magic-in-the-air/
+      \includegraphics[width=\textwidth]{images/Hess.png}
+
+      \vspace{0.15cm}
+
+      {\scriptsize Gamma rays create atmospheric particle showers that emit Cherenkov light}
+
+    \end{column}
+
+    \begin{column}{0.38\textwidth}
+
+      \begin{itemize}
+
+        \item TeV gamma rays do not reach the ground directly
+
+        \vspace{0.25cm}
+
+        \item They interact with the atmosphere and produce particle cascades
+
+        \vspace{0.25cm}
+
+        \item Fast charged particles emit short Cherenkov light flashes
+
+        \vspace{0.25cm}
+
+        \item H.E.S.S. reconstructs the gamma-ray direction, energy, and arrival time
+
+      \end{itemize}
+
+      \vspace{0.25cm}
+
+      \begin{block}{Timing analysis}
+        Using the pulsar rotation period, photon arrival times can be phase-folded to search for pulsed emission.
+      \end{block}
+    \end{column}
+
+  \end{columns}
+
+\end{frame}
+
 
 \begin{frame}{Pulsed gamma rays up to \qty{20}{\tera\electronvolt}}
 
@@ -413,61 +561,6 @@
         Pulsed gamma-ray emission persists up to
         \qty{20}{\tera\electronvolt}.
       \end{block}
-
-    \end{column}
-
-  \end{columns}
-
-\end{frame}
-
-\begin{frame}{How does H.E.S.S. detect TeV gamma rays?}
-
-  \begin{columns}[T,onlytextwidth]
-
-    \begin{column}{0.58\textwidth}
-
-      \centering
-      % https://skyandtelescope.org/sky-and-telescope-magazine/magic-in-the-air/
-      \includegraphics[width=\textwidth]{images/Hess.png}
-
-      \vspace{0.15cm}
-
-      {\scriptsize Gamma rays create atmospheric particle showers that emit Cherenkov light}
-
-    \end{column}
-
-    \begin{column}{0.38\textwidth}
-
-      \vspace{0.2cm}
-
-      \begin{itemize}
-
-        \item TeV gamma rays do not reach the ground directly
-
-        \vspace{0.25cm}
-
-        \item They interact with the atmosphere and produce particle cascades
-
-        \vspace{0.25cm}
-
-        \item Fast charged particles emit short Cherenkov light flashes
-
-        \vspace{0.25cm}
-
-        \item H.E.S.S. reconstructs the gamma-ray direction, energy, and arrival time
-
-      \end{itemize}
-
-      \vspace{0.45cm}
-
-      \begin{block}{Timing analysis}
-        Using the pulsar rotation period, photon arrival times can be phase-folded to search for pulsed emission.
-      \end{block}
-
-      \vspace{0.2cm}
-
-      {\footnotesize
-      H.E.S.S. is an Imaging Atmospheric Cherenkov Telescope (IACT) array.}
 
     \end{column}
 
