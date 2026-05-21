@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{bookmark}
+\usepackage{booktabs}
 \usepackage[percent]{overpic}
 \usepackage{xcolor}
 
@@ -142,9 +143,10 @@
 
     \begin{column}{0.58\textwidth}
       \centering
-      %https://www.cv.nrao.edu/~sransom/web/Ch6.html
-      \vspace*{-0.35cm}
-      \includegraphics[height=\textheight, keepaspectratio]{images/neutron_star_fieldlines.png}
+      % images/neutron_star_fieldlines.png is from https://www.cv.nrao.edu/~sransom/web/Ch6.html
+      \vspace*{-0.15cm}
+      % https://imagine.gsfc.nasa.gov/science/objects/neutron_stars1.html
+      \includegraphics[width=\textwidth, keepaspectratio]{images/neutron_star_fieldlines_low_level.png}
     \end{column}
 
     \begin{column}{0.38\textwidth}
@@ -225,14 +227,69 @@
 
 \end{frame}
 
+\begin{frame}{Why is a spectral cutoff expected?}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.56\textwidth}
+
+      \centering
+      %chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://pos.sissa.it/241/027/pdf
+      \includegraphics[width=\textwidth]{images/cutoff.png}
+
+      \vspace{0.15cm}
+
+      {\scriptsize Simplified schematic of the expected gamma-ray spectrum}
+
+    \end{column}
+
+    \begin{column}{0.40\textwidth}
+
+      \vspace{0.25cm}
+
+      \begin{itemize}
+
+        \item Pulsars efficiently accelerate charged particles
+
+        \vspace{0.25cm}
+
+        \item Curved relativistic motion produces strong radiation losses
+
+        \vspace{0.25cm}
+
+        \item Radiation losses increase rapidly at high energies
+
+        \vspace{0.25cm}
+
+        \item Standard curvature-radiation models therefore predict a cutoff around the GeV range
+
+      \end{itemize}
+
+      \vspace{0.45cm}
+
+      \begin{block}{Key idea}
+        The same processes that produce gamma rays also limit the maximum photon energy.
+      \end{block}
+
+    \end{column}
+
+  \end{columns}
+
+\end{frame}
+
 \begin{frame}{The light cylinder}
   \begin{columns}[T,onlytextwidth]
 
     \begin{column}{0.58\textwidth}
       \centering
-      % https://www.cv.nrao.edu/~sransom/web/Ch6.html
+      % https://www.annualreviews.org/content/journals/10.1146/annurev-astro-052920-112338
       \vspace*{-0.35cm}
-      \includegraphics[height=\textheight, keepaspectratio]{images/neutron_star_fieldlines.png}
+      \includegraphics[
+        height=\textheight,
+        keepaspectratio,
+        trim={0 10cm 85cm 10cm},
+        clip
+      ]{images/neutron_star_fieldlines_extendet.png}
     \end{column}
 
     \begin{column}{0.38\textwidth}
@@ -316,6 +373,309 @@
   \vspace{0.03cm}
 
   {\scriptsize Vela pulse profile folded over one rotation period}
+
+\end{frame}
+
+\begin{frame}{Pulsed gamma rays up to \qty{20}{\tera\electronvolt}}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.64\textwidth}
+      \centering
+      \includegraphics[height=\textheight, trim={0cm 0cm 1cm 2.5cm}, clip]
+      {images/HESS_LAT_JointPhasogram_5TeV_v1.pdf}
+
+      {\scriptsize Phase-folded gamma-ray emission from the Vela pulsar at different energy ranges}
+
+    \end{column}
+
+    \begin{column}{0.32\textwidth}
+
+      \vspace{0.15cm}
+
+      \begin{itemize}
+
+        \item Photon arrival times are folded over the pulsar rotation period
+
+        \vspace{0.25cm}
+
+        \item Distinct pulse peaks remain visible even at TeV energies
+
+        \vspace{0.25cm}
+
+        \item H.E.S.S. detects pulsed emission beyond the expected GeV cutoff
+
+      \end{itemize}
+
+      \vspace{0.45cm}
+
+      \begin{block}{Main result}
+        Pulsed gamma-ray emission persists up to
+        \qty{20}{\tera\electronvolt}.
+      \end{block}
+
+    \end{column}
+
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{How does H.E.S.S. detect TeV gamma rays?}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.58\textwidth}
+
+      \centering
+      % https://skyandtelescope.org/sky-and-telescope-magazine/magic-in-the-air/
+      \includegraphics[width=\textwidth]{images/Hess.png}
+
+      \vspace{0.15cm}
+
+      {\scriptsize Gamma rays create atmospheric particle showers that emit Cherenkov light}
+
+    \end{column}
+
+    \begin{column}{0.38\textwidth}
+
+      \vspace{0.2cm}
+
+      \begin{itemize}
+
+        \item TeV gamma rays do not reach the ground directly
+
+        \vspace{0.25cm}
+
+        \item They interact with the atmosphere and produce particle cascades
+
+        \vspace{0.25cm}
+
+        \item Fast charged particles emit short Cherenkov light flashes
+
+        \vspace{0.25cm}
+
+        \item H.E.S.S. reconstructs the gamma-ray direction, energy, and arrival time
+
+      \end{itemize}
+
+      \vspace{0.45cm}
+
+      \begin{block}{Timing analysis}
+        Using the pulsar rotation period, photon arrival times can be phase-folded to search for pulsed emission.
+      \end{block}
+
+      \vspace{0.2cm}
+
+      {\footnotesize
+      H.E.S.S. is an Imaging Atmospheric Cherenkov Telescope (IACT) array.}
+
+    \end{column}
+
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{Why is the H.E.S.S. Vela signal significant?}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.60\textwidth}
+      \centering
+      \renewcommand{\arraystretch}{1.25}
+      \normalsize
+      \begin{tabular}{l c c c}
+        \toprule
+        \textbf{Energy cut} & \textbf{C-test} & \textbf{LR test} & \textbf{H-test} \\
+        \midrule
+        $>1$ TeV  & $4.3\sigma$ & -- & -- \\
+        $>3$ TeV  & $4.9\sigma$ & $4.7\sigma$ & -- \\
+        $>5$ TeV  & $\mathbf{5.8\sigma}$ & -- & -- \\
+        $>7$ TeV  & $5.6\sigma$ & $4.8\sigma$ & $4.5\sigma$ \\
+        $>20$ TeV & $4.6\sigma$ & -- & -- \\
+        \bottomrule
+      \end{tabular}
+
+      \vspace{0.35cm}
+
+      \begin{block}{Main point}
+        Multiple independent periodicity tests give $>4\sigma$ evidence for pulsed emission.
+      \end{block}
+
+    \end{column}
+
+    \begin{column}{0.37\textwidth}
+      \small
+
+      \textbf{Tests used}
+      \vspace{0.1cm}
+
+      \begin{itemize}
+        \item H-test: no assumed pulse shape
+        \item C-test: expected P2 pulse position/width
+        \item LR test: ON/OFF phase regions
+      \end{itemize}
+
+      \vspace{0.25cm}
+
+      \begin{block}{Why this matters}
+      The TeV excess appears at the Vela P2 phase:
+      \[
+      \phi^{\rm TeV}_{P2}=0.568\pm0.003
+      \]
+      consistent with GeV P2:
+      \[
+      \phi^{\rm GeV}_{P2}=0.565\pm0.001
+      \]
+      \end{block}
+
+    \end{column}
+
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{The observed spectrum challenges standard expectations}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.62\textwidth}
+
+      \centering
+
+      \includegraphics[width=\textwidth]{images/HESS_SED_SpectralModels_v4.pdf}
+
+      \vspace{0.15cm}
+
+      {\scriptsize Spectral energy distribution of the Vela pulsar (Figure 3 from the paper)}
+
+    \end{column}
+
+    \begin{column}{0.34\textwidth}
+
+      \vspace{0.15cm}
+
+      \begin{itemize}
+
+        \item The spectrum extends far beyond the expected GeV cutoff
+
+        \vspace{0.25cm}
+
+        \item A simple continuation of the standard curvature-radiation component struggles to describe the data
+
+        \vspace{0.25cm}
+
+        \item The highest-energy emission suggests an additional radiation component
+
+      \end{itemize}
+
+      \vspace{0.45cm}
+
+      \begin{block}{Physical implication}
+        The observed TeV emission may require
+        additional acceleration regions or alternative radiation mechanisms.
+      \end{block}
+
+    \end{column}
+
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{Possible explanations for the TeV emission}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.64\textwidth}
+
+      \centering
+
+      \includegraphics[width=\textwidth]{images/DraftSketchV4.pdf}
+
+      \vspace{0.15cm}
+
+      {\scriptsize Candidate emission scenarios discussed in the paper (Figure 4)}
+
+    \end{column}
+
+    \begin{column}{0.32\textwidth}
+
+      \vspace{0.1cm}
+
+      \begin{itemize}
+
+        \item Particle acceleration near the current sheet
+
+        \vspace{0.25cm}
+
+        \item Magnetic reconnection in the outer magnetosphere
+
+        \vspace{0.25cm}
+
+        \item Inverse Compton scattering in the striped wind region
+
+        \vspace{0.25cm}
+
+        \item Emission produced farther from the neutron-star surface
+
+      \end{itemize}
+
+      \vspace{0.45cm}
+
+      \begin{block}{Important}
+        The paper does not provide a final explanation,
+        but shows that standard pulsar-emission models are likely incomplete.
+      \end{block}
+
+    \end{column}
+
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{Conclusion}
+
+  \begin{columns}[T,onlytextwidth]
+
+    \begin{column}{0.58\textwidth}
+
+      \centering
+
+      \includegraphics[width=\textwidth]{images/final.png}
+
+    \end{column}
+
+    \begin{column}{0.38\textwidth}
+
+      \vspace{0.2cm}
+
+      \begin{itemize}
+
+        \item H.E.S.S. detected pulsed gamma rays from the Vela pulsar up to
+        \qty{20}{\tera\electronvolt}
+
+        \vspace{0.3cm}
+
+        \item The observed spectrum challenges standard curvature-radiation expectations
+
+        \vspace{0.3cm}
+
+        \item Additional high-energy emission mechanisms may be required
+
+        \vspace{0.3cm}
+
+        \item Pulsars remain powerful laboratories for extreme plasma physics and particle acceleration
+
+      \end{itemize}
+
+      \vspace{0.55cm}
+
+      \begin{block}{Open question}
+        Where — and how — are particles accelerated to such extreme energies?
+      \end{block}
+
+    \end{column}
+
+  \end{columns}
 
 \end{frame}
 
