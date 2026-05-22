@@ -109,33 +109,66 @@
 % Sources up to this point https://chandra.harvard.edu/deadstar/vela.html
 
 \begin{frame}{From a dead star to a neutron star}
-  \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.48\textwidth}
-      \vspace{0.25cm}
-      \begin{itemize}
-        \item Massive stars end their lives in a core-collapse supernova
-        \item The central remnant can become a neutron star
-        \item Typical radius: only about \qty{10}{\kilo\meter} to \qty{15}{\kilo\meter}
-        \item Enormous density, rapid rotation, and strong magnetic fields
-      \end{itemize}
+  \centering
 
-      \vspace{0.45cm}
+  % Image size: 960 x 960
+  % Original grid: 2 columns x 3 rows
+  % Each panel: 480 x 320
+  %
+  % New layout:
+  % 1  2  3
+  % 4  5  6
+  % image from %https://en.wikipedia.org/wiki/Neutron_star
+  \setlength{\tabcolsep}{2pt}
+  \renewcommand{\arraystretch}{0.85}
 
-      \begin{block}{Key idea}
-        Collapse does not just make the object smaller:
-        it turns the remnant into an extreme rotating electromagnetic system.
-      \end{block}
-    \end{column}
+  \begin{tabular}{ccc}
+    % Step 1: original top-left
+    \includegraphics[
+      width=0.31\textwidth,
+      trim=0 640 480 0,
+      clip
+    ]{images/core_collapse_neutron_star.png}
+    &
+    % Step 2: original top-right
+    \includegraphics[
+      width=0.31\textwidth,
+      trim=480 640 0 0,
+      clip
+    ]{images/core_collapse_neutron_star.png}
+    &
+    % Step 3: original middle-left
+    \includegraphics[
+      width=0.31\textwidth,
+      trim=0 300 480 320,
+      clip
+    ]{images/core_collapse_neutron_star.png}
+    \\[-0.05cm]
 
-    \begin{column}{0.48\textwidth}
-      \centering
-      %https://en.wikipedia.org/wiki/Neutron_star
-      \includegraphics[width=\textwidth]{images/core_collapse_neutron_star.png}
+    % Step 4: original middle-right
+    \includegraphics[
+      width=0.31\textwidth,
+      trim=480 320 0 320,
+      clip
+    ]{images/core_collapse_neutron_star.png}
+    &
+    % Step 5: original bottom-left
+    \includegraphics[
+      width=0.31\textwidth,
+      trim=0 0 480 660,
+      clip
+    ]{images/core_collapse_neutron_star.png}
+    &
+    % Step 6: original bottom-right
+    \includegraphics[
+      width=0.31\textwidth,
+      trim=480 0 0 640,
+      clip
+    ]{images/core_collapse_neutron_star.png}
+  \end{tabular}
 
-      \vspace{0.15cm}
-      {\scriptsize Schematic evolution from massive star to neutron star}
-    \end{column}
-  \end{columns}
+  \vspace{0.08cm}
+  {\scriptsize Schematic evolution from massive star to neutron star}
 \end{frame}
 
 \begin{frame}{Collapse creates an extreme environment}
@@ -150,30 +183,32 @@
     \end{column}
 
     \begin{column}{0.38\textwidth}
-      \vspace{0.5cm}
-
+      \vspace{0.25cm}
       \begin{itemize}
-        \item Radius:
-        \qtyrange{10}{15}{\kilo\meter}
+        \item Collapse shrinks the radius by many orders of magnitude:
+        \[
+          R_{\star} \gg R_{\rm NS}
+        \]
 
-        \vspace{0.3cm}
+        \item Angular momentum conservation spins the remnant up:
+        \[
+          I\Omega \approx \text{const.}
+          \quad\Rightarrow\quad
+          \Omega_{\rm NS} \gg \Omega_{\star}
+        \]
 
-        \item Vela rotates about
-        \qty{11}{times\per\second}
+        \item Magnetic flux is approximately compressed:
+        \[
+          \Phi_B \sim B R^2 \approx \text{const.}
+          \quad\Rightarrow\quad
+          B_{\rm NS} \propto R^{-2}
+        \]
 
-        \vspace{0.3cm}
-
-        \item Magnetic fields up to
-        \qty{e8}{\tesla}
+        \item For Vela:
+        \(f \simeq \qty{11}{\hertz}\), 
+        \(B \sim \qty{e8}{\tesla}\)
       \end{itemize}
-
-      \vspace{0.6cm}
-
-      \begin{block}{Key idea}
-          Extreme electromagnetic conditions enable efficient particle acceleration.
-      \end{block}
     \end{column}
-
   \end{columns}
 \end{frame}
 
@@ -277,12 +312,12 @@
     \begin{column}{0.56\textwidth}
 
       \centering
-      %chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://pos.sissa.it/241/027/pdf
+      %https://pos.sissa.it/241/027/pdf
       \includegraphics[width=\textwidth]{images/cutoff.png}
 
       \vspace{0.15cm}
 
-      {\scriptsize Simplified schematic of the expected gamma-ray spectrum}
+      {\scriptsize Example Plot to illustrate the expected gamma-ray spectrum and its cutoff}
 
     \end{column}
 
@@ -627,51 +662,83 @@
 
 \end{frame}
 
-\begin{frame}{The observed spectrum challenges standard expectations}
+\begin{frame}{How to read the tested Vela models}
+  \small
+
+  \begin{block}{Common assumption}
+    Multi-TeV photons are produced by inverse-Compton scattering (IC) in all models:
+    \(e^\pm+\gamma_{\rm seed}\rightarrow e^\pm+\gamma_{\rm TeV}\).\\
+    The phase-aligned GeV and TeV components are treated as emission from one
+    electron population with \(\gamma_{\max}\sim10^7\text{--}10^8\), where
+    \(\gamma_{\max}\) is the maximum electron Lorentz factor.
+  \end{block}
+
+  \vspace{-0.1cm}
 
   \begin{columns}[T,onlytextwidth]
 
-    \begin{column}{0.62\textwidth}
+    \column{0.49\textwidth}
+    \begin{block}{Class I: GeV = curvature radiation}
+      \[
+      E_{\rm CR}\propto \frac{\gamma^3}{\rho_c}
+      \]
+      {\scriptsize
+      \(E_{\rm CR}\): characteristic curvature-radiation photon energy\\
+      \(\rho_c\): curvature radius of the particle trajectory
+      }
 
-      \centering
-
-      \includegraphics[width=\textwidth]{images/HESS_SED_SpectralModels_v4.pdf}
-
-      \vspace{0.15cm}
-
-      {\scriptsize Spectral energy distribution of the Vela pulsar (Figure 3 from the paper)}
-
-    \end{column}
-
-    \begin{column}{0.34\textwidth}
-
-      \vspace{0.15cm}
+      \vspace{0.08cm}
 
       \begin{itemize}
-
-        \item The spectrum extends far beyond the expected GeV cutoff
-
-        \vspace{0.25cm}
-
-        \item A simple continuation of the standard curvature-radiation component struggles to describe the data
-
-        \vspace{0.25cm}
-
-        \item The highest-energy emission suggests an additional radiation component
-
+        \item \(I_a\): reference CR model fitted to the GeV component only;
+        the associated IC emission is then compared to the TeV data.
+        
+        \item \(I_b\): joint CR+IC description, where the same electron distribution
+        is used for the GeV curvature-radiation and TeV IC components.
+        
+        \item \(I_c\): same CR+IC setup as \(I_b\), but with an extended seed-photon
+        field including far-infrared photons.
       \end{itemize}
+    \end{block}
 
-      \vspace{0.45cm}
+    \column{0.49\textwidth}
+    \begin{block}{Class II: GeV = synchrotron radiation}
+      \[
+      \text{current sheet / striped wind scenario}
+      \]
 
-      \begin{block}{Physical implication}
-        The observed TeV emission may require
-        additional acceleration regions or alternative radiation mechanisms.
-      \end{block}
+      \vspace{-0.15cm}
 
-    \end{column}
+      \begin{itemize}
+        \item \(II_a\): reference SR model fitted to the GeV component only;
+        the associated IC emission is then compared to the TeV data.
+        
+        \item \(II_b\): SR+IC model with a high-energy particle tail, motivated by
+        escape from strong-cooling regions or reacceleration.
+        
+        \item \(II_c\): SR+IC model including relativistic bulk motion, so that the
+        emitted spectrum is Doppler-boosted in the observer frame.
+      \end{itemize}
+    \end{block}
 
   \end{columns}
 
+  \vspace{0.05cm}
+  {\scriptsize
+  CR: curvature radiation \quad
+  SR: synchrotron radiation \quad
+  IC: inverse-Compton scattering
+  }
+
+\end{frame}
+
+\begin{frame}{The observed spectrum challenges standard expectations}
+  \centering
+  \includegraphics[
+    width=0.70\textwidth,
+    trim=0cm 1cm 0cm 2cm,
+    clip
+  ]{images/HESS_SED_SpectralModels_v4.pdf}
 \end{frame}
 
 \begin{frame}{Possible explanations for the TeV emission}
@@ -763,7 +830,7 @@
       \vspace{0.55cm}
 
       \begin{block}{Open question}
-        Where — and how — are particles accelerated to such extreme energies?
+        Where - and how - are particles accelerated to such extreme energies?
       \end{block}
 
     \end{column}
