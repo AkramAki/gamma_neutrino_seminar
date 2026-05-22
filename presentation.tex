@@ -33,6 +33,11 @@
   mathrm=sym,
 }
 
+\newcommand{\imgsource}[1]{%
+  \vspace{0.04cm}%
+  {\tiny Source: #1}%
+}
+
 \title{Discovery of a Radiation Component from the Vela Pulsar Reaching \texorpdfstring{\qty{20}{\tera\electronvolt}}{20 TeV}}
 \author{Akram Aki}
 \institute{Neutrino and Gamma-ray Astronomy Seminar}
@@ -74,6 +79,10 @@
           \end{minipage}
         }%
       }
+      % Source for title-frame images: vela_region.png and vela_zoom.png
+      \put(74,2){%
+        \color{white}\tiny Source: \cite{chandraVela}
+      }
     \end{overpic}%
   }
 \end{frame}
@@ -102,7 +111,7 @@
       \includegraphics[width=\textwidth]{images/vela_pulsar_context.png}
 
       \vspace{0.15cm}
-      {\scriptsize Vela pulsar and surrounding nebula / remnant}
+            {\scriptsize Vela pulsar and surrounding nebula / remnant \cite{chandraVela}}
     \end{column}
   \end{columns}
 \end{frame}
@@ -168,7 +177,7 @@
   \end{tabular}
 
   \vspace{0.08cm}
-  {\scriptsize Schematic evolution from massive star to neutron star}
+  {\scriptsize Schematic evolution from massive star to neutron star \cite{wikiNeutronStar}}
 \end{frame}
 
 \begin{frame}{Collapse creates an extreme environment}
@@ -180,6 +189,7 @@
       \vspace*{-0.15cm}
       % https://imagine.gsfc.nasa.gov/science/objects/neutron_stars1.html
       \includegraphics[width=\textwidth, keepaspectratio]{images/neutron_star_fieldlines_low_level.png}
+      \imgsource{\cite{nasaImagineNeutronStars}}
     \end{column}
 
     \begin{column}{0.38\textwidth}
@@ -227,9 +237,10 @@
       ]{images/synchroton_radiation.png}
 
       \vspace{0.15cm}
-
       {\scriptsize
-      Synchrotron and curvature radiation: charged particles radiate when their motion is bent}
+      Synchrotron and curvature radiation: charged particles radiate when their motion is bent
+      \cite{freeDictionarySynchrotron}}
+      
     \end{column}
 
     \begin{column}{0.5\textwidth}
@@ -240,7 +251,8 @@
       \vspace{0.15cm}
 
       {\scriptsize
-      Inverse Compton scattering: low-energy photons are boosted to gamma-ray energies}
+      Inverse Compton scattering: low-energy photons are boosted to gamma-ray energies
+      \cite{researchGateIC}}
     \end{column}
 
   \end{columns}
@@ -317,7 +329,8 @@
 
       \vspace{0.15cm}
 
-      {\scriptsize Example Plot to illustrate the expected gamma-ray spectrum and its cutoff}
+      {\scriptsize Example plot to illustrate the expected gamma-ray spectrum and its cutoff
+      \cite{posCutoff}}
 
     \end{column}
 
@@ -372,6 +385,7 @@
 
     \begin{column}{0.38\textwidth}
       \vspace{0.05cm}
+      {\tiny Image} \imgsource{\cite{annualReviewsPulsars}}
 
       \begin{block}{From co-rotation to a limit}
         If the magnetosphere co-rotates with the neutron star,
@@ -409,20 +423,17 @@
 
     \begin{column}{0.42\textwidth}
       \centering
-
+      %https://www.researchgate.net/figure/How-a-Pulsar-Beam-Sweeps-over-Earth_fig1_309491818
       \includegraphics[
         width=\textwidth,
         trim={5cm 3.5cm 3cm 0cm},
         clip
       ]{images/pulsar_beam_schematic.png}
-
-      \vspace{0.08cm}
-
-      {\scriptsize Simplified picture: rotation modulates the observed emission}
+      {\scriptsize Simplified picture: rotation modulates the observed emission \cite{researchGatePulsarBeam}}
     \end{column}
 
     \begin{column}{0.54\textwidth}
-      \vspace{0.25cm}
+      \vspace{0.05cm}
 
     \begin{block}{Key idea}
       Periodic pulses show that the gamma-ray emission is tied to the
@@ -430,12 +441,13 @@
       information about where the radiation is produced.
     \end{block}
 
-      \vspace{0.2cm}
+      \vspace{0.1cm}
 
       {\footnotesize
       Different models place the emission region in different parts of the
       magnetosphere, current sheet, or pulsar wind. The exact geometry
-      remains an active area of research.}
+      remains an active area of research. \\ 
+      Figure below: {\scriptsize Vela pulse profile folded over one rotation period \cite{hessVela2023}}}
     \end{column}
 
   \end{columns}
@@ -449,10 +461,6 @@
     trim={0cm 0cm 0cm 13cm},
     clip
   ]{images/HESS_LAT_JointPhasogram_5TeV_v1.pdf}
-
-  \vspace{0.03cm}
-
-  {\scriptsize Vela pulse profile folded over one rotation period}
 
 \end{frame}
 
@@ -468,7 +476,7 @@
 
       \vspace{0.15cm}
 
-      {\scriptsize The H.E.S.S. telescope array in Namibia}
+      {\scriptsize The H.E.S.S. telescope array in Namibia \cite{wikiHESS}}
 
     \end{column}
 
@@ -519,11 +527,9 @@
 
       \centering
       % https://skyandtelescope.org/sky-and-telescope-magazine/magic-in-the-air/
-      \includegraphics[width=\textwidth]{images/Hess.png}
-
-      \vspace{0.15cm}
-
-      {\scriptsize Gamma rays create atmospheric particle showers that emit Cherenkov light}
+      \includegraphics[width=0.95\textwidth]{images/Hess.png}
+      \vspace{-0.15cm}
+      {\tiny Image Source: \cite{skyAndTelescopeCherenkov}}
 
     \end{column}
 
@@ -568,8 +574,6 @@
       \includegraphics[height=\textheight, trim={0cm 0cm 1cm 2.5cm}, clip]
       {images/HESS_LAT_JointPhasogram_5TeV_v1.pdf}
 
-      {\scriptsize Phase-folded gamma-ray emission from the Vela pulsar at different energy ranges}
-
     \end{column}
 
     \begin{column}{0.32\textwidth}
@@ -597,6 +601,10 @@
         \qty{20}{\tera\electronvolt}.
       \end{block}
 
+      \vspace{0.35cm}
+      {\scriptsize Figure: Phase-folded gamma-ray emission from the Vela pulsar at different energy ranges
+      \cite{hessVela2023}}
+
     \end{column}
 
   \end{columns}
@@ -622,6 +630,7 @@
         $>20$ TeV & $4.6\sigma$ & -- & -- \\
         \bottomrule
       \end{tabular}
+      \imgsource{\cite{hessVela2023}}
 
       \vspace{0.35cm}
 
@@ -799,8 +808,9 @@
     \begin{column}{0.58\textwidth}
 
       \centering
-
+      % https://de.wikipedia.org/wiki/Geminga
       \includegraphics[width=\textwidth]{images/final.png}
+      \imgsource{\cite{wikiGeminga}}
 
     \end{column}
 
@@ -837,6 +847,79 @@
 
   \end{columns}
 
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+  \scriptsize
+
+  \begin{thebibliography}{99}
+
+    \bibitem{chandraVela}
+    NASA/CXC/SAO.
+    \newblock \emph{Vela Pulsar}.
+    \newblock Chandra X-ray Observatory.
+    \newblock \url{https://chandra.harvard.edu/deadstar/vela.html}
+
+    \bibitem{wikiNeutronStar}
+    Wikipedia contributors.
+    \newblock \emph{Neutron star}.
+    \newblock \url{https://en.wikipedia.org/wiki/Neutron_star}
+
+    \bibitem{nasaImagineNeutronStars}
+    NASA Goddard Space Flight Center.
+    \newblock \emph{Neutron Stars}.
+    \newblock Imagine the Universe.
+    \newblock \url{https://imagine.gsfc.nasa.gov/science/objects/neutron_stars1.html}
+
+    \bibitem{freeDictionarySynchrotron}
+    The Free Dictionary.
+    \newblock \emph{Synchrotron emission}.
+    \newblock \url{https://encyclopedia2.thefreedictionary.com/synchrotron+emission}
+
+    \bibitem{researchGateIC}
+    Camden Ertley.
+    \newblock \emph{Example of inverse Compton scattering}.
+    \newblock ResearchGate.
+    \newblock \url{https://www.researchgate.net/profile/Camden-Ertley/publication/260971192}
+
+    \bibitem{posCutoff}
+    Proceedings of Science.
+    \newblock \emph{Gamma-ray pulsar spectrum / cutoff illustration}.
+    \newblock \url{https://pos.sissa.it/241/027/pdf}
+
+    \bibitem{annualReviewsPulsars}
+    Annual Reviews.
+    \newblock \emph{Pulsars and their magnetospheres}.
+    \newblock \url{https://www.annualreviews.org/content/journals/10.1146/annurev-astro-052920-112338}
+
+    \bibitem{researchGatePulsarBeam}
+    ResearchGate.
+    \newblock \emph{How a Pulsar Beam Sweeps over Earth}.
+    \newblock \url{https://www.researchgate.net/figure/How-a-Pulsar-Beam-Sweeps-over-Earth_fig1_309491818}
+
+    \bibitem{wikiHESS}
+    Wikipedia contributors.
+    \newblock \emph{High Energy Stereoscopic System}.
+    \newblock \url{https://en.wikipedia.org/wiki/High_Energy_Stereoscopic_System}
+
+    \bibitem{skyAndTelescopeCherenkov}
+    Sky \& Telescope.
+    \newblock \emph{MAGIC in the Air}.
+    \newblock \url{https://skyandtelescope.org/sky-and-telescope-magazine/magic-in-the-air/}
+
+    \bibitem{hessVela2023}
+    The H.E.S.S. Collaboration et al.
+    \newblock \emph{Discovery of a radiation component from the Vela pulsar reaching 20 teraelectronvolts}.
+    \newblock Nature Astronomy \textbf{7}, 1341--1350, 2023.
+    \newblock \url{https://doi.org/10.1038/s41550-023-02052-3}
+
+    \bibitem{wikiGeminga}
+    Wikipedia contributors.
+    \newblock \emph{Geminga}.
+    \newblock German Wikipedia.
+    \newblock \url{https://de.wikipedia.org/wiki/Geminga}
+
+  \end{thebibliography}
 \end{frame}
 
 \end{document}
